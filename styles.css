@@ -1,0 +1,634 @@
+@charset "UTF-8";
+
+/* Reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+      font-family: "MagdaWeb W03 Regular";
+     font-size: .8rem;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+
+   }
+
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: "Blur-Regular";
+  src: url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.eot");
+  src: url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.eot?#iefix")format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.woff2")format("woff2"),
+       url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.woff")format("woff"),
+       url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.ttf")format("truetype"),
+       url("https://db.onlinewebfonts.com/t/7e8601c112331686d7e3e6b525d0793b.svg#BlurWeb-Light W03 Regular")format("svg");
+}
+
+/* Global styles */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #b4b4b4;
+  --darkGrey: #9f9f9f;
+  --spacing: .25rem;
+}
+
+html {
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Blur-Regular, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  background-color: var(--black);
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  filter: blur(0px);
+  font-weight: normal;
+   transition: filter 0.3s, font-weight 0.3s;
+}
+
+
+/* Header styles */
+.header {
+  position: fixed;
+  top: 1rem;
+  width: 100vw;
+  text-align: center;
+  color: var(--white);
+  z-index: 1001;
+  font-size: 1.6rem;
+  
+}
+
+.logo {
+  filter: blur(0px);
+  font-family: "BlurWeb-Light W03 Regular";
+  font-weight: 400;
+  font-style: normal;
+  transition: all 0.5s;
+}
+
+.logo:hover {
+  filter: blur(3px);
+  font-weight: 900;
+}
+#sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 2rem;
+  z-index: 300;
+  pointer-events: none;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 57%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Project images styles */
+.project-images {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background-color: black;
+}
+.quote-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.title-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .quote-image {
+    width: 100%;
+  }
+}
+
+.project-images__image {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+
+
+}
+
+.project-images__image[data-index="0"] {
+  transform: translateY(-1px);
+  margin-bottom: -100vh;
+
+}
+
+
+.project-images__image--landscape {
+  -o-object-fit: cover;
+  object-fit: cover;
+
+}
+
+@media (max-width: 1000px) {
+  .project-images__image {
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+}
+
+/* Blend modes */
+[data-blend-mode="Screen"] { mix-blend-mode: screen; }
+[data-blend-mode="Overlay"] { mix-blend-mode: overlay; }
+[data-blend-mode="Multiply"] { mix-blend-mode: multiply; }
+[data-blend-mode="Lighten"] { mix-blend-mode: lighten; }
+[data-blend-mode="Darken"] { mix-blend-mode: darken; }
+[data-blend-mode="Color Dodge"] { mix-blend-mode: color-dodge; }
+[data-blend-mode="Color Burn"] { mix-blend-mode: color-burn; }
+[data-blend-mode="Hard Light"] { mix-blend-mode: hard-light; }
+[data-blend-mode="Soft Light"] { mix-blend-mode: soft-light; }
+[data-blend-mode="Difference"] { mix-blend-mode: difference; }
+[data-blend-mode="Exclusion"] { mix-blend-mode: exclusion; }
+
+/* Info styles */
+.info {
+  position: relative;
+  z-index: 50;
+  /* padding: .25rem */
+}
+
+.info-title {
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  padding: .5rem;
+  visibility: hidden;
+}
+
+.project-titles__title .text-wrap {
+  max-width: 30rem;
+  margin-inline: auto;
+  text-align: center;
+  color: var(--white);
+  /* text-shadow:  0px 0px 25px rgba(0, 0, 0, 1),
+     0px 0px 12px rgba(0, 0, 0, 1),
+     0px 0px 5px rgba(0, 0, 0, 1); */
+}
+
+.text-wrap span{
+   font-size: 1rem;
+}
+.q1{
+  font-family: "adobe-handwriting-frank", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   font-size: 1rem;
+  mix-blend-mode: difference;
+  color: var(--grey);
+}
+
+
+
+.project-titles__title .text-wrap ul a {
+  font-size: 0.8rem;
+
+}
+.project-titles__title .text-wrap a:hover {
+  font-weight: bold;
+   filter: blur(2px);
+   /* text-shadow: 0px 0px 5px rgba(255, 255, 255, 1); */
+
+}
+.project-titles__title .text-wrap a{
+   font-size: 1rem;
+  /* text-shadow: 0px 0px 25px rgba(0, 0, 0, 1),
+     0px 0px 12px rgba(0, 0, 0, 1),
+     0px 0px 5px rgba(0, 0, 0, 1); */
+}
+
+.project-titles__title .text-wrap a::after {
+  content: "\00A0""↗";
+  display: inline-block;
+}
+
+
+
+.project-titles__title {
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  visibility: hidden;
+}
+
+.info__inner {
+   background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,1) 100%);
+
+  color: var(--white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100vh;
+  /* min-height: calc(100vh - .5rem); */
+  padding-top: 4rem;
+
+   /* mix-blend-mode: overlay; */
+}
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+
+/* Drawer item styles */
+
+
+/* Text styles */
+p {
+  font-family: "MagdaWeb W03 Regular";
+  font-size: .8rem;
+  padding: 0 10%;
+  text-align: center;
+}
+
+#about p {
+  padding: 0 20%;
+}
+
+.year {
+  font-family: "BlurWeb-Bold W03 Regular";
+  font-size: 0.8rem;
+}
+
+
+/* Overlay styles */
+.overlay-title {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  pointer-events: none;
+  text-align: center;
+}
+
+#text {
+  position: sticky;
+  top: 10%;
+  padding-bottom: 50vh;
+  color: white;
+  font-size: 1.2rem;
+  
+}
+
+/* Section specific styles */
+#about-title {
+  /* background-color: rgba(0, 0, 0, 0.9);  */
+  height: 400vh; 
+}
+#press-title { 
+  /* background-color: rgba(0, 64, 255, 0.5);  */
+  height: 600vh; 
+}
+#music-title { 
+  /* background-color: rgba(0, 255, 4, 0.5);  */
+  height: 500vh; 
+}
+#gallery-title { 
+  /* background-color: rgba(251, 0, 255, 0.5);  */
+  height: 100vh; 
+}
+#contact-title { 
+  /* background-color: rgba(0, 255, 4, 0.5);  */
+  height: 200vh; 
+}
+
+/* Music container styles */
+
+
+.music-container {
+   float: left;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  margin-top: 15%;
+  /* object-fit: cover; */
+}
+
+#music-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* padding: 20%; */
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.yt {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+#yt-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Album title styles */
+#album-title, #album-date {
+  position: fixed;
+  color: white;
+  max-width: 30rem;
+  margin-inline: auto;
+  text-align: center;
+  /* text-shadow:  0px 0px 25px rgba(0, 0, 0, 1),
+   0px 0px 12px rgba(0, 0, 0, 1),
+   0px 0px 5px rgba(0, 0, 0, 1); */
+  
+}
+
+#album-title {
+  top: 22.5%;
+}
+
+#album-date {
+  bottom: 15%;
+}
+
+/* Gallery styles */
+.gallery {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 20%;
+  overflow: hidden;
+  padding-top: 52.5%; /* 8:5 Aspect Ratio */
+  /* background-color: red; */
+}
+
+.gallery-iframe {
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  border: none;
+   overflow: hidden;
+}
+
+/* Responsive styles */
+@media (min-width: 1920px) {
+  html {
+    /* font-size: 28px; */
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-color: var(--black);
+  }
+
+  .project-images__image {
+    object-fit: cover;
+  }
+}
+.column {
+ width: 30%;
+  position: fixed;
+   display: block;
+  margin: 10%;
+  /* background-color: red; */
+
+}
+
+@media (max-width: 600px) {
+  .column {
+    width: 90%;
+    /* margin-bottom: 20px; */
+ 
+  }
+
+  .column-1 {
+    width: 95%;
+  }
+
+  .iconBar a {
+    font-size: 1.5em;
+  }
+
+  #album-date {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: .8rem;
+  }
+
+  .header {
+    top: .5rem;
+  }
+}
+
+.center{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .center{
+
+     width: 90%;
+  }
+  ul {
+     padding: 10px;
+  }
+
+  }
+#overlay-color {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%);
+  z-index: 100; 
+  pointer-events: none;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* height: 50px; */
+  color: #ffffff;
+  text-align: center;
+  z-index: 1000;
+   mix-blend-mode: difference;
+
+}
+.center-icon {
+  margin: auto;
+  width: 25%;
+  /* border: 3px solid #73AD21; */
+  /* background-color: red; */
+
+}
+
+.icon-bar {
+  width: 100%;
+  padding-bottom: 0.5rem;
+  /* background-color: #555; */
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.5em;
+  filter: blur(0px);
+  transition: all 0.5s;
+}
+
+.icon-bar a:hover {
+  filter: blur(2px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .center-icon {
+    width: 50%;
+  }
+}
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  overflow: no-scroll;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: block;
+  transition: opacity 1.5s ease-out;
+}
+#box {
+  /* Center the text in the viewport. */
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+  filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-family: "BlurWeb-Bold W03 Regular";
+  font-weight: 400;
+  font-size: 2em;
+  font-style: normal;
+  text-align: center;
+  user-select: none;
+  color: white;
+}
