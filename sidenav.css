@@ -1,0 +1,88 @@
+.overlay-nav {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 5%, rgba(0,0,0,0.9) 12%, rgba(0,0,0,0.9) 100%);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  /* background-color: red; */
+}
+
+.overlay-nav a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--white);
+  display: inline-block;
+  transition: 0.3s;
+  filter: blur(0px);
+  font-weight: normal;
+   transition: filter 0.3s, font-weight 0.3s;
+}
+.nav-links{
+  margin: auto;
+  width: 15%;
+  padding: 10px;
+  /* background-color: blue; */
+}
+.overlay-nav span {
+  font-size: 1.2rem;
+  color: var(--white);
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 900;
+ 
+}
+.overlay-nav span::after {
+  content:"\00A0" "\00A0";
+  display: inline-block;  
+}
+
+.overlay-nav a:hover, .overlay-nav a:focus {
+  filter: blur(2px);
+  font-weight: 900;
+   mix-blend-mode: difference;
+}
+
+.overlay-nav .closebtn {
+  position: absolute;
+  top: 1rem;
+  right: 45px;
+  font-size: 2rem;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay-nav {overflow-y: auto;}
+  .overlay-nav a {font-size: 1.6rem}
+ 
+
+}
+
+@media screen and (max-height: 650px) {
+  .nav-links{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+  }
+  .overlay-nav .closebtn {
+
+    top: .5rem;
+  right: 35px;
+  }
+}
+
