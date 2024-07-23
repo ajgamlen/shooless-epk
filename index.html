@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-template="home">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SHOOLESS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="description" />
+  <link href="https://db.onlinewebfonts.com/a/Ah3yF1zAxYBkk2bmbIgEp2M7ZPqM52mitPJKY1Yn9MAtV0An6aMIh1INjd96Z3VjgVw3812MP3L0R3eMyITJ8eyMoWCa52vqgeAL17nY" rel="stylesheet" type="text/css"/>
+  <link rel="preload" href="https://db.onlinewebfonts.com/a/Ah3yF1zAxYBkk2bmbIgEp2M7ZPqM52mitPJKY1Yn9MAtV0An6aMIh1INjd96Z3VjgVw3812MP3L0R3eMyITJ8eyMoWCa52vqgeAL17nY" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+   <link rel="icon" type="image/svg+xml" href="">
+  <!-- <link rel="mask-icon" href="" color="#000000" /> -->
+  <link href="styles.css" rel="stylesheet">
+  <link href="sidenav.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/zwz7jfz.css">
+</head>
+
+  <body onload="loadingPage()" style="margin:0;">
+   <div id="overlay">
+     <div id="box">
+       <span id="text1"></span>
+       <span id="text2"></span>
+     </div>
+   </div>
+    <!-- The SVG filter used to create the merging effect -->
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+          <feColorMatrix in="SourceGraphic"
+              type="matrix"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+        </filter>
+      </defs>
+    </svg>
+<div id="overlay-color"></div>
+    <div id="sticky"></div>
+  <header class="header">
+    <!-- <a class="back" href="#">&#8668;</a> -->
+    <a class="logo"onclick="toggleNav()">SHOOLESS</a>
+  </header>
+    <div id="myNav" class="overlay-nav">
+ <div class="overlay-content"onclick="closeNav()">
+
+        <a href="#about-title">About</a><br>
+        <a href="#press-title">Press</a><br>
+        <a href="#music-title">Music</a><br>
+        <a href="#gallery-title">Gallery</a><br>
+        <a href="#contact-title">Contact</a>
+      </div>
+      
+    </div>
+  
+   
+    <div class="footer">
+      <div class="center-icon">
+        <div class="icon-bar">
+          <a target="_blank" href="https://www.instagram.com/shooless_band/"><i class="fa fa-instagram"></i></a>
+          <a target="_blank" href="https://shooless.bandcamp.com/album/shooless"><i class="fa fa-bandcamp"></i></a>
+          <a target="_blank" href="https://open.spotify.com/artist/5p2oEckUmp90qHxlA7S04Q?si=4j9NUP-GSZO93ibpaSeKpw"><i class="fa fa-spotify"></i></a>
+          <a target="_blank" href="https://youtube.com/channel/UCSiPMPhBcKuW6uEUSa3tvvQ?si=33OEuWdebHv86dBB"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="info-title">
+    <div class="text-wrap">
+<!-- <p>test</p> -->
+      
+    </div>
+  </div>
+   
+  <div class="project-titles">
+    <div class="overlay-title" id="about-title">  <div id="text">About</div>
+       </div></div>
+     <div class="project-titles">
+    <div class="overlay-title" id="press-title">  <div id="text">Press</div>
+     </div>
+  </div>
+    <div class="project-titles">
+      <div class="overlay-title" id="music-title">  <div id="text">Music</div>
+       </div>
+    </div>
+    <div class="project-titles">
+      <div class="overlay-title" id="gallery-title">  <div id="text">Gallery</div>
+       </div>
+    </div>
+    <div class="project-titles">
+      <div class="overlay-title" id="contact-title">  <div id="text">Contact</div>
+       </div>
+    </div>
+
+     <div class="project-titles__title" data-index="2">
+
+
+        <div class="text-wrap"><p class="center">Shooless brings a sound and finesse that defies the status quo, from soaring rock to delicate jazz, embodying authenticity and sonic exploration.</p></div></div>
+        
+    <div class="project-titles__title" data-index="3">
+      <div class="text-wrap"><p class="center">What started with spontaneous jams in a West Auckland storage unit has blossomed into a dynamic musical force, inspired by artists such as Jeff Buckley, King Krule, Patti Smith, Mastadon, Jefferson Airplane, Rage Against the Machine, and PJ Harvey.</p></div>
+    </div>
+
+    <div class="project-titles__title" data-index="4">
+       <div class="text-wrap"><p class="center">They frequent venues across the Tāmaki Makaurau live scene, captivating audiences with their energetic performances. And with highly anticipated shows across Aotearoa they're an act you don’t want to miss.</p></div>
+    </div>
+    
+
+    <div class="project-titles__title">
+      
+    </div>
+ 
+    <div class="project-titles__title" data-index="5">
+      
+      <div class="text-wrap"><p class="center">Their latest single 'Sunsets' is an absorbing preview of what's to come from their forthcoming album. Each track promises to unravel a narrative of personal struggle, self-reflection, and eventual resolution.</p></div>
+    </div>
+ 
+    <div class="project-titles__title" data-index="6">
+       <div class="text-wrap"><p class="q1">"Very few artists I have seen perform break the fourth wall between artist and audience in the way Shooless does."<br><br>- Hannah Nott, Ponsonby News</p></div>
+    </div>
+    <div class="project-titles__title" data-index="7">
+      <div class="text-wrap"><p class="q1">"Their essence and echoes of PJ Harvey, Jeff Buckley and Tool are boiled in the voodoo of King Krule."</p></div>
+
+    </div>
+    <div class="project-titles__title" data-index="8">
+       <div class="text-wrap"><p class="q1">"Guy Yarrall...belongs in the obsessive cannon of Tame Impala’s Kevin Parker, Kurt Vile and Beck ritualistically tinkering loop pedals and churning out channeled riffs."</p></div>
+
+      </div>
+    <div class="project-titles__title" data-index="9">
+       <div class="text-wrap"><p class="q1">"Different genre swords from jazz fusion and trip hop cut the ephemeral idea into perfected audio cathedrals."<br><br> - Floyd Lee, The 13th Floor</p></div>
+    </div>
+    <div class="project-titles__title" data-index="10">
+ 
+      <div class="text-wrap"><span>Podcasts & Radio Interviews:</span><br><br>
+        <ul>
+           <li><a href="https://95bfm.com/bcast/a-k%C5%8Drero-w-shooless-april-22-2024" target="_blank">A kōrero with Shooless 95bfm Interview:</a></li>
+          <li><a href="https://95bfm.com/bcast/fancy-new-band-with-shooless-friday-r%C4%81mere-8-september" target="_blank">Fancy New Band on 95bfm</a></li>
+        </ul>
+      </div>
+      </div>
+
+    </div>
+    <div class="project-titles__title" data-index="11">
+      <div class="text-wrap"><span>Articles:</span><br><br>
+        <ul>
+          <li><a href="https://issuu.com/ausm/docs/debate_issue_8_-_online/20" target="_blank">Debate Magazine, ‘Fairy Kisses from Shooless’</a></li>
+           <li><a href="https://13thfloor.co.nz/shooless-a-track-by-track-rundown-of-their-new-ep/" target="_blank">The 13th Floor, Shooless Track by Track Rundown</a></li>
+           <li><a href="https://ponsonbynews.co.nz/article-detail/show/3775/" target="_blank">Ponsonby News, ‘Shooless’ live @Ahu Ponsonby</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="project-titles__title" data-index="12">
+      <div class="text-wrap"><span>Upcoming Releases:</span><br><br>
+        <ul>
+        <li>Lonely Playground, Single (August)</li>
+          <li>Debt, Single (TBC)</li>
+          <li>Studio Album (TBC)</li>
+        </ul>
+      </div>
+    </div>
+      
+    <div class="project-titles__title" data-index="13">
+       <p id="album-title">Sunsets (Single)</p>
+
+      <div class="column">
+
+      <div class="music-container"> 
+
+        <iframe id="music-iframe" src="https://bandcamp.com/EmbeddedPlayer/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=3748770334/transparent=true/"></iframe>
+
+      </div>
+
+      </div>
+      <p id="album-date">(April, 2024)</p>
+       </div>
+    <div class="project-titles__title" data-index="14">
+       <p id="album-title">Shooless (EP)</p>
+
+      <div class="column">
+       
+      <div class="music-container"> 
+
+        <iframe id="music-iframe" src="https://bandcamp.com/EmbeddedPlayer/album=1926821684/size=large/bgcol=333333/linkcol=ffffff/transparent=true/"></iframe>
+
+      </div>
+
+      </div>
+      <p id="album-date">(August, 2023)</p>
+       </div>
+    <div class="project-titles__title" data-index="15">
+       <p id="album-title">Fancy New Band (Live)</p>
+       <div class="column">
+      <div class="yt"> 
+        <iframe id="yt-iframe" src="https://www.youtube.com/embed/cTbLfTY1JWU?si=FP5HUHx0ElvFQl6n&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+       </div>
+      <p id="album-date">(May, 2024)</p>
+    </div>
+    <div class="project-titles__title" data-index="16">
+      <div class="text-wrap">
+         <a target="_blank" href="https://on.soundcloud.com/QHtLLLejSaa7tQf58">Soundcloud</a><br>
+        <a target="_blank" href="https://shooless.bandcamp.com/album/shooless">Bandcamp</a><br>
+        <a target="_blank" href="https://open.spotify.com/artist/5p2oEckUmp90qHxlA7S04Q?si=4j9NUP-GSZO93ibpaSeKpw">Spotify</a><br>
+         <a target="_blank" href="https://music.apple.com/nz/artist/shooless/1618035089">Apple Music</a> 
+      </div>
+    </div>
+    <!-- <div class="project-titles__title" data-index="17">
+      </div> -->
+    <div class="project-titles__title" data-index="17">
+       <iframe src="gallery.html" margin="0" height="50%" width="100%" title="Iframe Example"></iframe>
+      <!-- <div class="gallery"> 
+        <iframe class="gallery-iframe" src="gallery.html"></iframe>
+      </div> -->
+      </div>
+    <div class="project-titles__title" data-index="18">
+      <div class="text-wrap">
+        <span>Instagram:</span>
+        <a href="https://www.instagram.com/shooless_band/" target="_blank">@shooless_band</a><br>
+        <span>Email:</span>
+        <a href="mailto:shoolessband@gmail.com"> shoolessband@gmail.com</a>  
+      </div>
+    </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <div class="project-images">
+
+        <img src="https://i.ibb.co/wYGLb66/img43.jpg"
+          class="project-images__image project-images__image--0 project-images__image--landscape" data-index="0">
+
+        <img src="https://i.ibb.co/Gn9RpCQ/Artboard-11.png"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="1"
+          data-blend-mode="Multiply">
+        <img src="https://i.ibb.co/CzyQbHN/Copy-of-000051.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="2"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/Ph3tQzf/bfm.png"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="3"
+          data-blend-mode="Lighten">
+        
+        <img src="https://i.ibb.co/YptQQYt/Copy-of-000066.jpg" class="project-images__image project-images__image--2 "
+          data-index="4" data-blend-mode="Difference">
+        <img src="https://i.ibb.co/fM9FhMR/Copy-of-000069.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="5"
+          data-blend-mode="Difference">
+        <img src="https://i.ibb.co/Khp6KGh/000044.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="6"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/Vq0JSsG/Copy-of-000004-1.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="7"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/F60fDkx/Copy-of-000067.png" class="project-images__image project-images__image--2 project-images__image--landscape"
+          data-index="8" data-blend-mode="Difference">
+        <img src="https://i.ibb.co/P4M3R9G/000045.jpg"
+          class="project-images__image project-images__image--0 project-images__image--landscape" data-index="9" data-blend-mode="Lighten">
+
+        <img src="https://i.ibb.co/hLbn5Ty/Copy-of-000067.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="10"
+          data-blend-mode="Difference">
+        <img src="https://i.ibb.co/p3WhzDL/Shooless-Live-at-Neck-of-the-Woods.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="11"
+          data-blend-mode="Lighten">
+        <img src="https://i.ibb.co/wcSmQ0F/img56.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="12"
+          data-blend-mode="Lighten">
+      
+        <img src="https://i.ibb.co/wgDfdRt/Copy-of-000046.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="13"
+          data-blend-mode="Difference">
+        <img src="https://i.ibb.co/ZdnLKpP/Freya-Pinkerton-Live-at-Whammy.jpg"
+          class="project-images__image project-images__image--2 project-images__image--landscape" data-index="14"
+          data-blend-mode="Difference">
+        <img src="https://i.ibb.co/QrMdCPT/IMG-1824-1.jpg"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="15"
+          data-blend-mode="Screen">
+        
+        <img src="https://i.ibb.co/r35P0WF/face.png" class="project-images__image project-images__image--2 "
+          data-index="16" data-blend-mode="Lighten">
+        
+        <img src="https://i.ibb.co/bmBGhww/bg1.png"
+          class="project-images__image project-images__image--1 project-images__image--landscape" data-index="17"data-blend-mode="Lighten">
+
+      </div>
+
+
+  </div>
+  </div>
+    
+    <script src="main.min.js"></script>
+     <script src="script.js"></script>
+</body>
+
+</html>
