@@ -9,11 +9,13 @@
   <meta name="description" content="description" />
   <link href="https://db.onlinewebfonts.com/a/Ah3yF1zAxYBkk2bmbIgEp2M7ZPqM52mitPJKY1Yn9MAtV0An6aMIh1INjd96Z3VjgVw3812MP3L0R3eMyITJ8eyMoWCa52vqgeAL17nY" rel="stylesheet" type="text/css"/>
   <link rel="preload" href="https://db.onlinewebfonts.com/a/Ah3yF1zAxYBkk2bmbIgEp2M7ZPqM52mitPJKY1Yn9MAtV0An6aMIh1INjd96Z3VjgVw3812MP3L0R3eMyITJ8eyMoWCa52vqgeAL17nY" as="font" type="font/woff" crossorigin>
+  <link href="https://db.onlinewebfonts.com/c/af2b17049e12f8eaf2c9736e6949236a?family=Biro+Script+Plus+US" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
    <link rel="icon" type="image/svg+xml" href="">
   <!-- <link rel="mask-icon" href="" color="#000000" /> -->
   <link href="styles.css" rel="stylesheet">
   <link href="sidenav.css" rel="stylesheet">
+  <link href="jquery.gScrollingCarousel.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/zwz7jfz.css">
 </head>
@@ -213,7 +215,27 @@
     <!-- <div class="project-titles__title" data-index="17">
       </div> -->
     <div class="project-titles__title" data-index="17">
-       <iframe src="gallery.html" margin="0" height="50%" width="100%" title="Iframe Example"></iframe>
+      <div class="strip">
+        <div>
+          <div class="g-scrolling-carousel carousel">
+            <div class="items"id="mask">
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/ZdnLKpP/Freya-Pinkerton-Live-at-Whammy.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/CsF5Sd7/Hero-Image-Shooles.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/wgDfdRt/Copy-of-000046.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/k5f82JV/img54.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/bm27zdH/Copy-of-000004.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/Khp6KGh/000044.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/6J2bMZX/Copy-of-000002-1.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/p3WhzDL/Shooless-Live-at-Neck-of-the-Woods.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/QrMdCPT/IMG-1824-1.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/CzyQbHN/Shooless-Red.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/P4M3R9G/000045.jpg"></a>
+              <a href="http://example.com" target="_blank"><img src="https://i.ibb.co/hLbn5Ty/Copy-of-000067.jpg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- <iframe src="gallery.html" margin="0" height="50%" width="100%" title="Iframe Example"></iframe> -->
       <!-- <div class="gallery"> 
         <iframe class="gallery-iframe" src="gallery.html"></iframe>
       </div> -->
@@ -292,6 +314,23 @@
 
   </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+  <script src="jquery.gScrollingCarousel.js"></script> 
+  <script>
+    $(document).ready(function(){
+      $(".carousel .items").gScrollingCarousel();
+      $(".carousel-two .items").gScrollingCarousel({
+        mouseScrolling: false,
+        draggable: true,
+        snapOnDrag: false,
+        mobileNative: false,
+      });
+      $(".carousel-three .items").gScrollingCarousel({ 
+        scrollAmount: 'single' 
+      });
+     
+    });
+  </script>
     
     <script src="main.min.js"></script>
      <script src="script.js"></script>
