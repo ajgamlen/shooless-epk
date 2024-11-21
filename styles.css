@@ -241,10 +241,11 @@ a {
    font-size: 1rem;
 }
 .q1{
-  font-family: "adobe-handwriting-frank", sans-serif;
+  /* font-family: "adobe-handwriting-frank", sans-serif; */
+  font-family: "Biro Script Plus US";
   font-weight: 400;
   font-style: normal;
-   font-size: 1rem;
+   font-size: 1.2rem;
   mix-blend-mode: difference;
   color: var(--grey);
 }
@@ -631,4 +632,33 @@ p {
   text-align: center;
   user-select: none;
   color: white;
+}
+.strip{
+  width:80vw;
+  margin: 0 auto;
+  background-image:url("https://i.ibb.co/pyfK9Tk/strip.png");
+  background-repeat: no-repeat;
+background-size: 100% 100%;
+padding: 20px;
+}
+#mask{
+        
+  -webkit-mask-box-image:
+    -webkit-linear-gradient(
+left,transparent, transparent 1%, white 2%, white 98%, transparent 100%);
+}
+.g-scrolling-carousel .items > *{
+  min-height:96px;
+  margin-right:10px;
+   /* border-radius: 70px; */
+   -webkit-mask-box-image:
+    -webkit-linear-gradient(
+left,transparent, transparent 1%, white 10%, white 90%, transparent 99%);
+
+}
+.g-scrolling-carousel .items a:last-child{
+  margin-right:0;
+}
+.carousel-three,.carousel-four {
+  width: 537px;
 }
