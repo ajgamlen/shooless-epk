@@ -358,7 +358,7 @@ p {
 /* Section specific styles */
 #about-title {
   /* background-color: rgba(0, 0, 0, 0.9);  */
-  height: 400vh; 
+  height: 300vh; 
 }
 #press-title { 
   /* background-color: rgba(0, 64, 255, 0.5);  */
@@ -366,7 +366,7 @@ p {
 }
 #music-title { 
   /* background-color: rgba(0, 255, 4, 0.5);  */
-  height: 500vh; 
+  height: 600vh; 
 }
 #gallery-title { 
   /* background-color: rgba(251, 0, 255, 0.5);  */
@@ -661,4 +661,7 @@ left,transparent, transparent 1%, white 10%, white 90%, transparent 99%);
 }
 .carousel-three,.carousel-four {
   width: 537px;
+}
+#vinyl{
+ background-blend-mode: multiply;
 }
