@@ -240,6 +240,14 @@ a {
 .text-wrap span{
    font-size: 1rem;
 }
+#LP{
+  font-family: "Biro Script Plus US";
+  font-weight: 400;
+  font-style: normal;
+   font-size: 1.2rem;
+  mix-blend-mode: difference;
+  color: var(--grey);
+}
 .q1{
   /* font-family: "adobe-handwriting-frank", sans-serif; */
   font-family: "Biro Script Plus US";
@@ -362,11 +370,11 @@ p {
 }
 #press-title { 
   /* background-color: rgba(0, 64, 255, 0.5);  */
-  height: 600vh; 
+  height: 500vh; 
 }
 #music-title { 
   /* background-color: rgba(0, 255, 4, 0.5);  */
-  height: 600vh; 
+  height: 700vh; 
 }
 #gallery-title { 
   /* background-color: rgba(251, 0, 255, 0.5);  */
